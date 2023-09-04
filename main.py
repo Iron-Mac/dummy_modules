@@ -23,12 +23,12 @@ class Input2(BaseModel):
 @app.post("/postager/")
 async def postagger(user_input: Input1):
     res = print_word_tag(user_input.input_data)
-    return {"res": res}
+    return {"output_list": res}
 
 @app.post("/textrank/")
 async def textrank(user_input: Input1):
     res = textrank(user_input.input_data)
-    return {"res": res}
+    return {"result": res}
 
 @app.post("/roge/")
 async def rouge(user_input: Input2):

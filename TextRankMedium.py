@@ -32,4 +32,4 @@ def textrank(user_input):
     for sent in sentences:
         if sent in top.keys():
             res.append(sent)
-    return res
+    return '. '.join(res)

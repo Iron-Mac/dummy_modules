@@ -92,10 +92,9 @@ def print_word_tag (inp):
 		sent_splited = each[0].split()
 		for i in range (len(each[1])):
 			
-			myStr+=str(sent_splited[i])+'/'+str(each[1][i])+' '
-		myStr+='\n'
+			tmp = [str(sent_splited[i]),str(each[1][i])]
+			myStr.append(tmp)
 	return myStr
-
 
 
 #print_word_tag()
