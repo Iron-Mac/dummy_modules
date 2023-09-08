@@ -2,7 +2,7 @@ from keras.models import load_model
 import pickle
 import numpy as np
 from keras.utils import pad_sequences
-from keras.utils.np_utils import to_categorical
+from keras.utils import to_categorical
 import makeCompatible as mc
 
 with open('data.pkl', 'rb') as f:
@@ -86,7 +86,7 @@ def tag_user_input (user_input):
 	return sent_tag
 
 def print_word_tag (inp):
-	myStr = ''
+	myStr = []
 	st_tag = tag_user_input(inp)
 	for each in st_tag:
 		sent_splited = each[0].split()
